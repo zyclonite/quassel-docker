@@ -1,10 +1,10 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
 LABEL maintainer "zyclonite"
 LABEL version "0.13.1"
 LABEL description "Quassel-Core as Docker Image"
 
-ARG version="0.13.1-r3"
+ARG version="0.13.1-r5"
 
 RUN apk add --no-cache --purge --clean-protected -u ca-certificates quassel-core=$version \
  && rm -rf /var/cache/apk/*
